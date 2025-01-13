@@ -14,7 +14,7 @@ def save_tasks(tasks):
         json.dump(tasks, file, indent=4)
 
 def add_task(tasks, task):
-    tasks.append[{'task': task, 'completed': False}]
+    tasks.append({'task': task, 'completed': False})
     save_tasks(tasks)
 
 def delete_task(tasks, index):
@@ -27,6 +27,14 @@ def delete_task(tasks, index):
 def complete_task(tasks, index):
     if 0 <= index < len(tasks):
         tasks[index]['completed'] = True
+        save_tasks(tasks)
+    else:
+        print("Invalid task number.")
+
+def edit_task(tasks, index):
+    if 0 <= index < len(tasks):
+        new_task = input("Enter the new task description: ")
+        tasks[index]['task'] = new_task
         save_tasks(tasks)
     else:
         print("Invalid task number.")
@@ -44,7 +52,8 @@ def main():
         print("2. Delete Task")
         print("3. Complete Task")
         print("4. Display Tasks")
-        print("5. Exit")
+        print("5. Edit Task")
+        print("6. Exit")
         choice = input("Enter your choice: ")
 
         if choice == '1':
@@ -59,6 +68,9 @@ def main():
         elif choice == '4':
             display_tasks(tasks)
         elif choice == '5':
+            index = int(input("Enter the task number to edit: "))
+            edit_task(tasks, index)
+        elif choice == '6':
             break
         else:
             print("Invalid choice. Please try again.")
