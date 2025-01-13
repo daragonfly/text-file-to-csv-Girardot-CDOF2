@@ -14,7 +14,7 @@ def save_tasks(tasks):
         json.dump(tasks, file, indent=4)
 
 def add_task(tasks, task):
-    tasks.append[{'task': task, 'completed': False}]
+    tasks.append({'task': task, 'completed': False})
     save_tasks(tasks)
 
 def delete_task(tasks, index):
