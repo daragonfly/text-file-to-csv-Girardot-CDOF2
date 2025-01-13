@@ -14,5 +14,5 @@ A console-based todo list application to help keep track of tasks.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/todo-list-application-your_name-your_td_number.git
-   cd todo-list-application-your_name-your_td_number
+   git clone https://github.com/daragonfly/todo-Girardot-CDOF2.git
+   cd todo-Girardot-CDOF2

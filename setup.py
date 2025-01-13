@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(
-    name='text-file-to-csv-Girardot-CDOF2',
+    name='todo-Girardot-CDOF2',
     version='1.0',
     author='daragonfly',
     license='MIT',
